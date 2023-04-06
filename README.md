@@ -29,7 +29,7 @@ Once we get a proper password length for our project you will recieve four confi
 
 Then after all of that users will get their randomly generated password. User will be able to highlight the password and copy it onto their clipboard. 
 
-Here is a link to the webpage:
+Here is a link to the webpage: https://giovanne-villanueva.github.io/Password_Generator/ 
 
 # License
 Please refer to License in repo
