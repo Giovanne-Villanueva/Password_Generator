@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var capital, lowerCase, specialChar, containNum= false;
-var Characters = ["~", "!", "@", ":", "<", ">", "\"", "?", "$", "#", "%"]
+var Characters = ["~", "!", "@", ":", "<", ">", "\"", "?", "$", "#", "%", " ", "&", "'", "(", ")", "*", "+", "-", ",", "\\", "/", ";", "=", "[", "]", "_", "^", "`", "{", "}"]
 
 function options(){
   // We ask the user if they would to include said character type
@@ -31,22 +31,18 @@ function fourOptions(){
   //if yes return character 
   if( (pick===0) && lowerCase){
     char = String.fromCharCode( (97 + randomNumber(25)) )
-    console.log("I am from here " + char)
     return char
   }
   else if((pick===1) && capital){
     char = String.fromCharCode( (65+ randomNumber(25)) )
-    console.log(char)
     return char
   }
   else if( (pick===2) && containNum){
     char = String.fromCharCode( (48 + randomNumber(9)) )
-    console.log( char )
     return char
   }
   else if( (pick===3) && specialChar){
     char = Characters[ randomNumber( (Characters.length - 1) ) ]
-    console.log( char )
     return char
   }
   //else chose another avalible option
@@ -62,7 +58,6 @@ function randomChar(length){
   //generate a random character length number of times and add it to the string to make the password
   for(var i=0; i< length; i++){
     password = password.concat(fourOptions())
-    //console.log(password[i])
   }
   
   //return password generated
